@@ -1,16 +1,16 @@
 body {
-    font-family: 'Oswald', sans-serif;
     background-image: url("../images/crystal.jpg");
     background-size: 200%;
     background-position-x: -600px;
     background-position-y: 900px;
     color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
 }
 
 h1 {
     font-size: 3em;
-    text-align: center;
     margin: 1em auto;
+    text-align: center;
 }
 
 h2 {
@@ -22,37 +22,46 @@ p {
     margin: 1em 2em;
 }
 
-.instructions {
-    font-size: 1em;
-    width: 50em;
-    margin: 2em auto;
-    border: solid;
-    border-width: 5px;
-    border-color: black;
-    background-color: slategrey;
-
-}
-
-.game {
+.crystal {
     float: left;
-    border: solid;
-    border-width: 5px;
-    border-color: black;
-    height: 250px;
-    width: 40%;
-    text-align: center;
-    margin-left: 5%;
-    align-content: center;
-    position: relative;
-    background-color: slategrey;
-
+    height: 80px;
+    margin-top: 10px;
+    width: auto;
 }
 
 .crystals {
-    margin: 0, auto;
-    height: 90px;
-    text-align: center;
     display: inline-block;
+    height: 90px;
+    margin: 0, auto;
+    text-align: center;
+}
+
+.game {
+    align-content: center;
+    background-color: slategrey;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+    float: left;
+    height: 250px;
+    margin-left: 5%;
+    position: relative;
+    text-align: center;
+    width: 40%;
+}
+
+.instructions {
+    font-size: 1em;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: slategrey;
+    margin: 2em auto;
+    width: 50em;
+}
+
+.loss, .win {
+    margin-top: 40px;
 }
 
 .total {
@@ -61,28 +70,13 @@ p {
 }
 
 .winLoss {
-    float: right;
+    background-color: slategrey;
     border: solid;
     border-width: 5px;
     border-color: black;
+    float: right;
     height: 250px;
-    width: 40%;
-    text-align: center;
     margin-right: 5%;
-    background-color: slategrey;
+    text-align: center;
+    width: 40%;
 }
-
-.loss, .win {
-    margin-top: 40px;
-}
-
- .crystal {
-    margin-top: 10px;
-    height: 80px;
-    width: auto;
-    float: left;
-}
-
-
-
-
