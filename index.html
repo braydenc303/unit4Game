@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head lang = "en">
+        <meta charset="UTF-8">
+        <title>Crystal Collector</title>
+        <link rel = "stylesheet" type = "text/css" href = "assets/css/reset.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700" rel="stylesheet">
+        <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css"/>
+    </head>
+    <body>
+        <h1>Crystal Collector!</h1>
+
+         <div class = "instructions">
+            <p>Each round of this game will begin by giving you a random goal between 19-120 for the number of
+            points to meet.
+            </p>
+
+            <p>You will be given four randomly arranged crystals with unknown point values. It is your job to 
+            determine how many points each crystal grants you, and in what order you need to click on them in
+            order to match the goal for the round.
+            </p>
+
+            <p>If you can match the goal exactly you win. Be careful though, because if you go over you lose.          
+            </p>
+
+            <p>Good Luck!</p>
+         </div>
+
+         <div class = "game">
+
+            <div><h2>Your Goal For This Round</h2></div>
+
+            <div><h2 class = "goal">###</h2></div>
+
+            <div class = "crystals">
+                <!-- <div id = "1"></div>
+                <div id = "2"></div>
+                <div id = "3"></div>
+                <div id = "4"></div> -->
+            </div>
+
+            <div class = "total">
+                <p>Current Total:</p>
+                <h2 class = "score">###</h2>
+            </div>
+
+         </div>
+
+         <div class = "winLoss">
+
+            <div class = "win"><p>Wins:</p></div>
+            
+            <h2 class = "wins">###</h2>
+
+            <div class = "loss"><p>Losses:</p></div>
+            
+            <h2 class = "losses">###</h2>
+        
+         </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+
+    </body>
+</html>

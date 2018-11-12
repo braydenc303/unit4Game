@@ -1,0 +1,76 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: slategrey;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 1em auto;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    display: block;
+    margin: 1em 2em;
+}
+
+.instructions {
+    font-size: 1em;
+    width: 50em;
+    margin: 2em auto;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.game {
+    float: left;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+    height: 250px;
+    width: 40%;
+    text-align: center;
+    margin-left: 5%;
+    align-content: center;
+    position: relative;
+}
+
+.crystals {
+    height: 90px;
+}
+
+
+.total {
+    text-align: center;
+}
+
+.winLoss {
+    float: right;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+    height: 250px;
+    width: 40%;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.loss, .win {
+    margin-top: 40px;
+}
+
+ .crystal {
+    height: 80px;
+    width: auto;
+    float: left;
+}
+
+
+
+
