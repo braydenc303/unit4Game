@@ -21,6 +21,7 @@
 
 function resetGame() {
     goal = Math.floor(((Math.random() * 100) + 1) + 19);
+    score = 0;
     $(".goal").text(goal);
     $(".wins").text(wins);
     $(".losses").text(losses);
@@ -32,8 +33,8 @@ function makeCrystals() {
     for (var i = 0; i < arr.length; i++) {
         var image = $("<img>");
         image.addClass("crystal");
-        image.attr("crystalval", Math.floor((Math.random() * 10) + 1));
-        image.attr("src", images[i]);
+        image.attr("crystalVal", Math.floor((Math.random() * 10) + 1));
+        image.attr("src", images[Math.floor(Math.random() * images.length)]);
         $(".crystals").append(image);
     }
 }
@@ -48,9 +49,24 @@ $(document).ready(function() {
     resetGame();
     makeCrystals();
 
+    $(".crystal").on("click", function(){
+        var val = ($(this).attr("crystalVal"));
+        console.log(val);
+        val = parseInt(val);
+        console.log(val);
+        score += val;
+        $(".score").text(score);
 
-
-
+        if (score === goal) {
+            wins++;
+            alert("Congratulations!\nYou matched the goal of " + goal +".\nYou won that round!");
+            resetGame();
+        } else if (score > goal) {
+            losses++;
+            alert("You overshot the goal of "+ goal + ".\nYou lost that round.");
+            resetGame();
+        }
+    });
 
 
 
