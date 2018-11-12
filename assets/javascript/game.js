@@ -20,6 +20,11 @@
 // Functions-----------------------------------------
 
 function resetGame() {
+    $(".crystals img:last-child").remove();
+    $(".crystals img:last-child").remove();
+    $(".crystals img:last-child").remove();
+    $(".crystals img:last-child").remove();
+    makeCrystals();
     goal = Math.floor(((Math.random() * 100) + 1) + 19);
     score = 0;
     $(".goal").text(goal);
@@ -33,7 +38,7 @@ function makeCrystals() {
     for (var i = 0; i < arr.length; i++) {
         var image = $("<img>");
         image.addClass("crystal");
-        image.attr("crystalVal", Math.floor((Math.random() * 10) + 1));
+        image.attr("crystalval", Math.floor((Math.random() * 10) + 1));
         image.attr("src", images[Math.floor(Math.random() * images.length)]);
         $(".crystals").append(image);
     }
@@ -47,13 +52,10 @@ function makeCrystals() {
 
 $(document).ready(function() {
     resetGame();
-    makeCrystals();
 
-    $(".crystal").on("click", function(){
-        var val = ($(this).attr("crystalVal"));
-        console.log(val);
+    $(document).on("click", ".crystal", function(){
+        var val = ($(this).attr("crystalval"));
         val = parseInt(val);
-        console.log(val);
         score += val;
         $(".score").text(score);
 
