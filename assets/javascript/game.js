@@ -23,10 +23,10 @@
 // Also, all the crystals will have four new hidden values. Of course, the 
 // user's score (and score counter) will reset to zero.
 function resetGame() {
-    $(".crystals img:last-child").remove();
-    $(".crystals img:last-child").remove();
-    $(".crystals img:last-child").remove();
-    $(".crystals img:last-child").remove();
+    $(".crystals").empty();
+    // $(".crystals img:last-child").remove();
+    // $(".crystals img:last-child").remove();
+    // $(".crystals img:last-child").remove();
     makeCrystals();
     goal = Math.floor(((Math.random() * 101) + 1) + 19);
     score = 0;
@@ -64,7 +64,8 @@ $(document).ready(function() {
 // When they do click one, update the player's score counter.
 
     $(document).on("click", ".crystal", function(){
-        var val = ($(this).attr("crystalval"));
+        var val = $(this).attr("crystalval");
+        console.log(val);
         val = parseInt(val);
         score += val;
         $(".score").text(score);
